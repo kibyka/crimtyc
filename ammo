@@ -1,0 +1,7 @@
+-- Inf Ammo
+
+for _,v in pairs(getgc(true)) do
+    if type(v) == "table" then
+        if rawget(v, "ReloadTime") then v.ReloadTime = 0 end
+    end
+end
