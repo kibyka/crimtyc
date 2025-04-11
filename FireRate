@@ -1,0 +1,8 @@
+-- Fire Rate
+
+for _,v in pairs(getgc(true)) do
+    if type(v) == "table" then
+        if rawget(v, "FireRate") then v.FireRate = 0.001 end
+        if rawget(v, "BulletSpeed") then v.BulletSpeed = 9999 end
+       end
+    end
