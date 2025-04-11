@@ -1,0 +1,9 @@
+-- No Recoil
+
+for _,v in pairs(getgc(true)) do
+    if type(v) == "table" then
+        if rawget(v, "Recoil") then v.Recoil = 0 end
+        if rawget(v, "CameraKnockback") then v.CameraKnockback = 0 end
+        if rawget(v, "KnockbackPercent") then v.KnockbackPercent = 0 end
+    end
+end
