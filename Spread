@@ -1,0 +1,14 @@
+-- No Spread
+
+for _,v in pairs(getgc(true)) do
+    if type(v) == "table" then
+        if rawget(v, "ChargeTime") then v.ChargeTime = 0 end
+        if rawget(v, "Spread") and type(v.Spread) == "table" then
+            v.Spread[1] = 0
+            v.Spread[2] = 0
+        end
+        if rawget(v, "MinSpreadPercent") then v.MinSpreadPercent = 0 end
+        if rawget(v, "SpreadIncreasePerSecond") then v.SpreadIncreasePerSecond = 0 end
+        if rawget(v, "SpreadDecreasePerSecond") then v.SpreadDecreasePerSecond = 9999 end
+    end
+end
